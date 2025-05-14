@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        .card {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            background: linear-gradient(145deg, #ffffff, #f0f8ff);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.1);
+            border: 2px solid #e6f3ff;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 123, 255, 0.2);
+            border-color: #4da6ff;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: #000;
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            color: #000;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: deepskyblue !important;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        body {
+            direction: rtl;
+            font-family: vazirmatn;
+            background-color: #f5f9ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="https://manoochehristreet.com/product/babylisspro-blue-fx-boost-limited-edition-clipper-trimmer-set-with-charging-base/" target="_blank" title="بزن بریم">
+            <img src="6c4beHnPeyhd1hQH-1-300x300.jpg" alt="ماشین اصلاح بابلیس">
+        </a>
+        <h3>ماشین اصلاح bablis pro</h3>
+        <p>مناسب سالن</p>
+        <p class="price">قیمت : 20,000,000 تومان</p>
+    </div>
+
+    <script>
+        // Add smooth animation when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.card');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'all 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
